@@ -15,9 +15,9 @@ export default function Header() {
   return (
     <header className="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-border-main">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
           <div className="flex-shrink-0">
-            <a href="#" className="font-bold text-2xl text-primary tracking-tight">
+            <a href="#" className="font-bold text-xl sm:text-2xl text-primary tracking-tight">
               Enzyme Africa
             </a>
           </div>
@@ -49,35 +49,38 @@ export default function Header() {
               className="text-text-main p-2"
               aria-label="Menu"
             >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
       </div>
 
-      {isOpen && (
-        <div className="md:hidden bg-white border-t border-border-main shadow-lg absolute w-full left-0">
-          <div className="px-4 pt-4 pb-6 space-y-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={`#${link.id}`}
-                onClick={() => setIsOpen(false)}
-                className="block text-lg font-medium text-text-main hover:text-secondary px-2 py-2"
-              >
-                {link.label}
-              </a>
-            ))}
+      {/* Mobile menu with smooth transition */}
+      <div 
+        className={`md:hidden bg-white border-t border-border-main shadow-lg absolute w-full left-0 transition-all duration-300 ease-in-out overflow-hidden ${
+          isOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0 border-t-0'
+        }`}
+      >
+        <div className="px-4 pt-3 pb-5 space-y-1">
+          {navLinks.map((link) => (
             <a
-              href={`#${SECTIONS.COMMANDE}`}
+              key={link.id}
+              href={`#${link.id}`}
               onClick={() => setIsOpen(false)}
-              className="block w-full text-center bg-primary hover:bg-deep text-white px-6 py-3 rounded-xl font-semibold transition-colors mt-4"
+              className="block text-base font-medium text-text-main hover:text-secondary hover:bg-gray px-3 py-3 rounded-xl transition-colors"
             >
-              Commander
+              {link.label}
             </a>
-          </div>
+          ))}
+          <a
+            href={`#${SECTIONS.COMMANDE}`}
+            onClick={() => setIsOpen(false)}
+            className="block w-full text-center bg-primary hover:bg-deep text-white px-6 py-3.5 rounded-xl font-semibold transition-colors mt-3"
+          >
+            Commander
+          </a>
         </div>
-      )}
+      </div>
     </header>
   );
 }

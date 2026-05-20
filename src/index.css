@@ -16,11 +16,18 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Faster touch response on mobile */
+a, button, select, input {
+  touch-action: manipulation;
 }
 
 /* Animations sur mesure */
