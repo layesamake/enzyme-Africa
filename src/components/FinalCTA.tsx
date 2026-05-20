@@ -16,7 +16,7 @@ export default function FinalCTA() {
         </p>
         <button 
           onClick={handleContact}
-          className="bg-primary hover:bg-deep text-white font-bold text-base sm:text-lg px-8 py-4 sm:px-12 sm:py-5 rounded-full shadow-lg shadow-primary/20 hover:-translate-y-1 transition-all"
+          className="bg-primary hover:bg-deep text-white font-bold text-base sm:text-lg px-8 py-4 sm:px-12 sm:py-5 rounded-full shadow-lg shadow-primary/20 hover:-translate-y-1 transition-all animate-pulse-gentle"
         >
           Commander maintenant
         </button>

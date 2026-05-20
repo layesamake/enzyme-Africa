@@ -32,9 +32,9 @@ export default function Benefits() {
               return (
                 <div 
                   key={index}
-                  className="bg-white/5 border border-white/10 p-4 sm:p-6 rounded-xl sm:rounded-2xl hover:bg-white/10 transition-colors duration-300"
+                  className="bg-white/5 border border-white/10 p-4 sm:p-6 rounded-xl sm:rounded-2xl hover:bg-white/10 hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300 group"
                 >
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary/20 text-light rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary/20 text-light rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-105 group-hover:rotate-3 transition-transform duration-300">
                     {Icon && <Icon size={20} className="sm:hidden" />}
                     {Icon && <Icon size={24} className="hidden sm:block" />}
                   </div>

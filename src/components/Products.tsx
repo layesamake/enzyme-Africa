@@ -24,10 +24,10 @@ export default function Products() {
             return (
               <div 
                 key={prod.id}
-                className={`relative flex flex-col bg-white rounded-2xl md:rounded-[2rem] p-5 sm:p-6 md:p-8 ${
+                className={`relative flex flex-col bg-white rounded-2xl md:rounded-[2rem] p-5 sm:p-6 md:p-8 transition-all duration-300 group ${
                   prod.recommended 
-                    ? 'border-2 border-secondary shadow-xl md:-translate-y-4' 
-                    : 'border border-border-main shadow-md'
+                    ? 'border-2 border-secondary shadow-xl md:-translate-y-4 hover:-translate-y-2 md:hover:-translate-y-6 hover:shadow-2xl hover:scale-[1.01]' 
+                    : 'border border-border-main shadow-md hover:-translate-y-2 hover:shadow-lg hover:scale-[1.01]'
                 }`}
               >
                 {prod.recommended && (
@@ -36,12 +36,12 @@ export default function Products() {
                   </div>
                 )}
 
-                <div className="aspect-[4/3] sm:aspect-square bg-gray rounded-xl sm:rounded-2xl mb-5 md:mb-8 overflow-hidden">
+                <div className="aspect-[4/3] sm:aspect-square bg-gray rounded-xl sm:rounded-2xl mb-5 md:mb-8 overflow-hidden relative">
                   <img 
                     src={prod.image}
                     alt={prod.name}
                     onError={(e) => { e.currentTarget.src = prod.fallbackImage; }}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 
@@ -69,7 +69,7 @@ export default function Products() {
                     onClick={handleOrder}
                     className={`w-full py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all ${
                       prod.recommended
-                        ? 'bg-primary hover:bg-deep text-white shadow-lg shadow-primary/20 hover:-translate-y-0.5'
+                        ? 'bg-primary hover:bg-deep text-white shadow-lg shadow-primary/20 hover:-translate-y-0.5 animate-pulse-gentle'
                         : 'bg-light text-primary border-2 border-secondary/30 hover:bg-secondary hover:text-white hover:border-secondary hover:shadow-lg hover:-translate-y-0.5'
                     }`}
                   >

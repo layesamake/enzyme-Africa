@@ -27,9 +27,9 @@ export default function Problems() {
             return (
               <div 
                 key={problem.id}
-                className="bg-white border border-border-main rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 hover:shadow-lg hover:border-light transition-all duration-300 group"
+                className="bg-white border border-border-main rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 hover:shadow-xl hover:border-light hover:-translate-y-2 transition-all duration-300 group"
               >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-light text-secondary rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-light text-secondary rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-6 group-hover:bg-primary group-hover:text-white group-hover:scale-105 group-hover:rotate-3 transition-all duration-300">
                   {Icon && <Icon size={20} className="sm:hidden" />}
                   {Icon && <Icon size={24} className="hidden sm:block" />}
                 </div>

@@ -27,9 +27,9 @@ export default function UseCases() {
             return (
               <div 
                 key={idx}
-                className="bg-white rounded-2xl md:rounded-[2rem] p-5 sm:p-6 md:p-8 shadow-sm border border-border-main hover:shadow-md transition-shadow"
+                className="bg-white rounded-2xl md:rounded-[2rem] p-5 sm:p-6 md:p-8 shadow-sm border border-border-main hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
               >
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-light text-primary rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-light text-primary rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-105 group-hover:rotate-3 transition-transform duration-300">
                   {Icon && <Icon size={24} className="sm:hidden" />}
                   {Icon && <Icon size={28} className="hidden sm:block" />}
                 </div>
@@ -44,7 +44,7 @@ export default function UseCases() {
 
                 <ul className="space-y-2 sm:space-y-3">
                   {useCase.points.map((point, pIdx) => (
-                    <li key={pIdx} className="flex items-start gap-2 sm:gap-3">
+                    <li key={pIdx} className="flex items-start gap-2 sm:gap-3 hover:translate-x-1 transition-transform duration-200 cursor-default">
                       <CheckCircle2 size={18} className="text-secondary shrink-0 mt-0.5 sm:hidden" />
                       <CheckCircle2 size={20} className="text-secondary shrink-0 mt-0.5 hidden sm:block" />
                       <span className="text-sm font-medium text-text-main leading-tight">{point}</span>

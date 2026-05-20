@@ -93,7 +93,7 @@ export default function QuickOrder() {
 
               <button 
                 type="submit"
-                className="w-full bg-primary hover:bg-secondary text-white font-bold text-base sm:text-lg py-3.5 sm:py-4 rounded-xl shadow-lg shadow-primary/20 hover:-translate-y-0.5 transition-all mt-2 sm:mt-4"
+                className="w-full bg-primary hover:bg-secondary text-white font-bold text-base sm:text-lg py-3.5 sm:py-4 rounded-xl shadow-lg shadow-primary/20 hover:-translate-y-0.5 transition-all mt-2 sm:mt-4 animate-pulse-gentle"
               >
                 Envoyer ma commande WhatsApp
               </button>
