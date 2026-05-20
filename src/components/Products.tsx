@@ -70,7 +70,7 @@ export default function Products() {
                     className={`w-full py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all ${
                       prod.recommended
                         ? 'bg-primary hover:bg-deep text-white shadow-lg shadow-primary/20 hover:-translate-y-0.5'
-                        : 'bg-gray hover:bg-border-main text-primary'
+                        : 'bg-light text-primary border-2 border-secondary/30 hover:bg-secondary hover:text-white hover:border-secondary hover:shadow-lg hover:-translate-y-0.5'
                     }`}
                   >
                     Commander {prod.format}
