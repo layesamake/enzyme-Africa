@@ -1,5 +1,5 @@
-export const WHATSAPP_PHONE = "221776544250";
-export const WHATSAPP_DISPLAY = "+221 77 654 42 50";
+export const WHATSAPP_PHONE = "221776464298";
+export const WHATSAPP_DISPLAY = "+221 77 646 42 98";
 
 export function createWhatsAppLink(message: string) {
   return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
