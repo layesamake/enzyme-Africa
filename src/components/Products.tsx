@@ -50,6 +50,10 @@ export default function Products() {
                     <h3 className="text-xl sm:text-2xl font-bold text-primary">{prod.name}</h3>
                     <div className="text-secondary font-semibold mt-1">{prod.format}</div>
                   </div>
+
+                  <div className="text-xl sm:text-2xl font-extrabold text-secondary">
+                    {prod.price}
+                  </div>
                   
                   <p className="text-sm sm:text-base text-text-muted">
                     {prod.description}
