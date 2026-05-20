@@ -1,0 +1,6 @@
+{
+  "name": "Enzyme Africa",
+  "description": "Solution naturelle polyvalente pour accompagner l’agriculture, l’élevage, l’hygiène, et l’assainissement écologique.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
